@@ -1,25 +1,7 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        textTheme: Theme.of(context).textTheme.apply(
-              bodyColor: Colors.white,
-              displayColor: Colors.white,
-            ),
-      ),
-      home: MyHomePage(),
-    );
-  }
-}
-
+import 'package:flutter/services.dart';
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -80,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(image: AssetImage('assets/falc.jpg'),
-                fit: BoxFit.cover),
+                    fit: BoxFit.cover),
               ),
             ),
             /*Container(
@@ -132,10 +114,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.blue,
                 ),
                 title: Text(
-                  'GÜNLÜK TAVSİYE',
-                  style:GoogleFonts.aclonica(textStyle:TextStyle(
-                    color: Colors.blue,
-                  ), )
+                    'GÜNLÜK TAVSİYE',
+                    style:GoogleFonts.aclonica(textStyle:TextStyle(
+                      color: Colors.blue,
+                    ), )
                 ),
                 onTap: () {
                   setState(() {
@@ -163,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: double.infinity,
                 child: Padding(
                     padding:
-                        EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
+                    EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
                     child: Text(yanitlar[yanitIndex],
                         style: TextStyle(fontSize: 16),
                         textAlign: TextAlign.center))),
